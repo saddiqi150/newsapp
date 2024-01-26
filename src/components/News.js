@@ -220,17 +220,15 @@ export class News extends Component {
             <div className='container my-3'>
                 <h2>SkyNews - Top Headlines </h2>
                 <div className='row'>
+                  {this.articles.map((element)=>{
+                    console.log(element);
+                  })}
                     <div className='col-md-4'>
                         <NewsItem  title="News Title" description="News Descriptions01" 
                         imageUrl='https://cdn.cnn.com/cnnnext/dam/assets/240120123326-split-nikki-haley-donald-trump-super-tease.jpg'
                         newUrl='Todo' />
                     </div>
-                    <div className='col-md-4'>
-                       <NewsItem  title="News Title" description="News Descriptions01" imageUrl='https://cdn.cnn.com/cnnnext/dam/assets/240120123326-split-nikki-haley-donald-trump-super-tease.jpg' />
-                    </div>
-                    <div className='col-md-4'>
-                       <NewsItem  title="News Title" description="News Descriptions01" imageUrl='https://cdn.cnn.com/cnnnext/dam/assets/240120123326-split-nikki-haley-donald-trump-super-tease.jpg' />
-                    </div>
+                    
                 </div>
             </div>
         )

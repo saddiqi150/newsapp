@@ -70,7 +70,10 @@ export class News extends Component {
                     <NewsItem   title={element.title?element.title.slice(0,40):""} 
                     description={element.description?element.description.slice(0,80):""} 
                     imageUrl={element.urlToImage}
-                    newUrl={element.url} />
+                    newUrl={element.url}
+                    auther={element.auther}
+                    date  ={element.publishedAt}
+                    source={element.source.name} />
                 </div>
                   })}
                   <div className="container d-flex justify-content-between">

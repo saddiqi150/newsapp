@@ -56,7 +56,7 @@ export class News extends Component {
 
       <div className='container my-3'>
         {this.state.loading && <Spinner />}
-        <h2 className='text-center' style={{ margin: '40px 0px' }} >SkyNews - {this.capitalizeFirstLetter(this.props.category)} Top Headlines </h2>
+        <h2 className='text-center' style={{ margin: '40px 0px', marginTop:'90px'  }} >SkyNews - {this.capitalizeFirstLetter(this.props.category)} Top Headlines </h2>
         <div className='row'>
           {!this.state.loading && this.state.articles.map((element) => {
             return <div key={element.url} className='col-md-4'>

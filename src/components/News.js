@@ -23,12 +23,13 @@ export class News extends Component {
     this.state = {
       articles: [],
       loading: false,
-      page: 1
+      page: 1,
+      //apiKey:86c9d7772ae74f06b2cc847d0a116229
     }
     document.title= `${this.capitalizeFirstLetter(this.props.category)} - SkyNews`
   }
   async UpdateData() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=86c9d7772ae74f06b2cc847d0a116229&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true })
     let data = await fetch(url);
     let parseData = await data.json(data);
